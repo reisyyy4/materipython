@@ -22,11 +22,33 @@
     Function
     There in list:
     1. len() --> How many items in the list
+
+    Index number:
+    Index number always starts from zero ([0]) and always starts from left hand side, So even negative indexing number for list even we have negative index number
+    Negative index numbers are starts from minus one ([-1]) and starts from right hand side
+
+    Know the index number of any item, Using this index method we can find the index number of any item
+    Syntax index method:
+    variable.index(value, start, stop) --> start and stop optional
+
+    Slicing:
+    Slicing use for you want to access a range of items from the list
+    Syntax:
+    [Start Index:Stop Index: Step Index]
+    When [..:..:..] --> Accessing all the items from index number zero to the last index number
+         [..:5 :..] --> Accessing from index number zero to 5 because stop in 5 index
+         [1 :..:..] --> Accessing from 1 index to the last index number
+         [..:..:-1] --> Accesing reverse all items 
 '''
 
 myList1 = [10, 20, 30, 40 ,50]
 mylist2 = list([100, 'Hello', 50.50, True])
 print(myList1)
 print(myList1[1])
+print(myList1[-1])
 print(len(myList1))
+print(myList1[len(myList1)-1])
 print(mylist2)
+idx = myList1.index(40, 2)
+print(idx)
+print(myList1[2:4])
