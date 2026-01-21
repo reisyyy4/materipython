@@ -68,13 +68,23 @@
     Can add new items to the dictionary using the two ways
     1. Using key - value assignment
        Using a simple assignment statement where value can be assigned directly to the new key
+       Syntax:
+       name_dict[new_key] = new_values
     2. Using update() Method:
        In this method, the item passed inside the update() method will be inserted into the dictionary. The item can be another dictionary
        or any iterable like a tuple of key - value pairs
+    
+    Modify value dictionary
+    1. Using key - value assignment
+       The method is the same as anchoring the item. Use the existing key then change the values, python will overwrite the old value with the new value
+    2. Using update() Method:
+       This method is very useful if you want to add or change many items at once, or combine two dictionaries, 
+       if the key already exists --> the value will be updated
+       if the key does not exist --> new item will be added
 
     Removing items dictionary
-    1. clear() --> variable.clear()
-    2. pop() --> variable.pop()
+    1. clear() --> name_dict.clear()
+    2. pop() --> name_dict.pop(key)
 '''
 
 # Create a dictionary
@@ -89,7 +99,7 @@ print(studDict)
 
 # Accessing elements of a dictionary
 
-# Access one key value --> name
+# Access one key value
 print(myDict['name'])
 
 # Access all the keys from the dictionary
@@ -127,6 +137,17 @@ print(myDict)
 # Adding items to the dictionary using update() method
 myDict.update({'province' : 'central java'})
 print(myDict) 
+
+# Modify value of a dictionary
+
+# Modify value of a dictionary using key - value assignment
+myDict['city'] = 'salatiga'
+print(myDict)
+
+# Modify value of a dictionary using update() method
+myDict2 = { 'city' : 'magelang', 'hobby': 'running' }
+myDict.update(myDict2)
+print(myDict)
 
 # Removing items a dictionary
 print(myDict.pop('city'))
