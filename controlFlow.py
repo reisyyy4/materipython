@@ -105,3 +105,46 @@ if x > 0 and y > 0 and z > 0: # --> when condition is True executed the if, when
         print("z is greater")
 else: 
     print("Negative numbers are not allowed")
+
+'''
+    Iterative statements:
+    1. while
+    2. for
+
+    What is loop?
+    In computer programming, a loop is a sequence of instruction that is continually repeated until a certain condition is reached
+'''
+
+'''
+    1. While
+       The while loop statement repeatedly executes a code block while a particular condition is true.
+       Syntax:
+       while condition:
+             statement 1
+             statement 2
+             ...
+             statement n
+'''
+
+x = 1
+while x <= 10:
+    print(x, end = " ")
+    x = x + 1
+
+x = 123
+sum = 0
+while x != 0:
+    reminder = x % 10
+    sum = sum + reminder
+    x = x // 10
+
+print(sum)
+
+x = 123
+reverse = 0
+while x != 0:
+    reminder = x % 10
+    reverse = reverse * 10 + reminder
+    x = x // 10
+
+print(reverse)
