@@ -124,8 +124,15 @@ else:
              statement 2
              ...
              statement n
+        
+        Palindrome Number
+        When you reverse a number, the number and reverse should be same
+        1. Reverse the number
+        2. Compare myinput number with reverse no
+        if both are sam - - - it palindrome
 '''
 
+# While
 x = 1
 while x <= 10:
     print(x, end = " ")
@@ -148,3 +155,47 @@ while x != 0:
     x = x // 10
 
 print(reverse)
+
+# Palindrome Numebr
+x = 121
+temp =  x
+reverse = 0
+while x != 0:
+    reminder = x % 10
+    reverse = reverse * 10 + reminder
+    x = x // 10
+
+if temp == reverse:
+    print("Its a Palindrome Number")
+else:
+    print("Its not a Palindrome Numebr")
+
+# Sum of x Number
+x = 10
+sum = 0
+i = 1
+
+while i <= x:
+    sum = sum + i
+    i = i + 1
+
+print(sum)
+
+# Factorial of a given Number
+x = 5
+fact = 1
+i = 1
+
+while i <= x:
+    fact = fact * i
+    i = i + 1
+
+print(fact)
+
+# Printing 10 table
+x = 10
+i = 1
+
+while i <= 10:
+    print(x, 'x', i, '=', x * i)
+    i = i + 1
