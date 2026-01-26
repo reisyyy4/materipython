@@ -130,6 +130,15 @@ else:
         1. Reverse the number
         2. Compare myinput number with reverse no
         if both are sam - - - it palindrome
+
+        Fibonacci Series
+        Sum of preceding two numbers
+        Example:
+        1 1 2 3 5 8 13 21
+
+        Infinite loop 
+        its a loop, it wont exit/terminate
+        break = break statement will terminate the loop 
 '''
 
 # While
@@ -168,7 +177,7 @@ while x != 0:
 if temp == reverse:
     print("Its a Palindrome Number")
 else:
-    print("Its not a Palindrome Numebr")
+    print("Its not a Palindrome Number")
 
 # Sum of x Number
 x = 10
@@ -199,3 +208,45 @@ i = 1
 while i <= 10:
     print(x, 'x', i, '=', x * i)
     i = i + 1
+
+# Fibonacci Number
+length = 9
+x1 = 1
+x2 = 2
+i = 1
+
+print(x1, end=" ")
+print(x2, end=" ")
+
+while i <= length:
+    x3 = x1 + x2
+    print(x3, end=" ")
+    x1 = x2
+    x2 = x3
+    i = i + 1
+
+# Armstrong Number
+n = 371
+temp = n
+result = 0 
+i = 1
+temp = n
+
+while n != 0:
+    reminder = n % 10
+    result = reminder ** 3 + result
+    n = n // 10
+
+if temp == result:
+    print("Its an Armstrong Number")
+else:
+    print("Its Not A Armstrong Number")
+
+# Infinite Loop
+i = 1
+
+while i <= 10:
+    print(i)
+    i = i + 1
+    if i == 6:
+        break
