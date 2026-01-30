@@ -138,7 +138,25 @@ else:
 
         Infinite loop 
         its a loop, it wont exit/terminate
-        break = break statement will terminate the loop 
+        break = break statement will terminate the loop
+
+    2. For
+       A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+       This is less like the for keyword in other programming languages, and works more like an iterator method as found in other
+       object-oriented programming languages
+       With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc
+       Syntax:
+       for ... in variable:
+         statement 1
+
+       The range() function 
+       to loop through a set code a specified number of times, we can use the range() function,the range() function returns a sequence of numbers
+       starting from by default and increments by 1(by default), and ends at a specified number.
+       Syntax for range():
+       range(start, stop, step)
+       Syntax:
+       for ... in range(...):
+         statement 1
 '''
 
 # While
@@ -250,3 +268,39 @@ while i <= 10:
     i = i + 1
     if i == 6:
         break
+
+# For
+
+# Range
+for x in range(1, 10, 2):
+    print(x, end=" ")
+
+# Reverse
+for x in range(10, 0, -1):
+    print(x, end=" ")
+
+# Sum of n Number's
+sum = 0
+for x in range(1, 11):
+    sum = sum + x
+print(sum)
+
+# Factorial of a given number
+n = int(input("Masukkan Angka: "))
+fact = 0
+
+for x in range(1, n+1):
+    fact = fact * x
+print (fact)
+
+# Fibonacci Number
+n1 = 0
+n2 = 1
+print(n1, end=" ")
+print(n2, end=" ")
+
+for x in range(3,8):
+    n3 = n1 + n2
+    print(n3, end=" ")
+    n1 = n2
+    n2 = n3
