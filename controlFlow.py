@@ -304,3 +304,41 @@ for x in range(3,8):
     print(n3, end=" ")
     n1 = n2
     n2 = n3
+
+'''
+    Nested For Loop
+    A nested loop is a loop inside a loop
+    The "inner loop" will be executed one time for each iteration of the "outer loop"
+    Syntax:
+    for loop: --> Outer for loop
+        for loop : --> Inner for loop
+          [block of statement]
+    
+    Example:
+    for x in range(1, 6):
+        for y in range(1, 6):
+            print('*', end=" ")
+        print()
+'''
+
+# Nested for loop
+for x in range(1, 6):
+    for y in range(1, 6):
+        print('*', end=" ")
+    print()
+
+# Practice Nested for loop
+for x in range(1, 6):
+    for y in range(x):
+        print('*', end=" ")
+    print()
+
+for x in range(5, 0, -1):
+    for y in range(x):
+        print('*', end=" ")
+    print()
+
+for x in range(1, 6):
+    for y in range(x):
+        print(y + 1, end=" ")
+    print()

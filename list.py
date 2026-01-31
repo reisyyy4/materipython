@@ -135,7 +135,7 @@ print(myList1)
 myList1.pop(2)
 print(myList1)
 #myList1.clear()
-#print(myList1)
+print(myList1)
 
 # Modify Single item
 myList1[2] = 25
