@@ -1,5 +1,4 @@
 # Data Penjualan (Baris = Hari, Kolom = Produk)
-
 data_penjualan = [[100, 200, 150], 
                   [120, 210, 160], 
                   [90, 190, 140],
@@ -7,25 +6,29 @@ data_penjualan = [[100, 200, 150],
                   [200, 250, 200]]
 nama_hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
 
-print("--- Analisis Per Hari (Baris) ---")
-data_labeling = {}
-hasil_analisis = []
-jumlah_baris = len(data_penjualan)
-# Loop Luar: Mengakses setiap hari (Baris)
-for i in range(jumlah_baris):
-    total_harian = 0
-    jumlah_kolom = len(data_penjualan[i])
+def analisis_penjualan(data_angka, data_label):
+    print("--- Analisis Per Hari (Baris) ---")
+    data_labeling = {}
+    hasil_analisis = []
+    jumlah_baris = len(data_angka)
+    # Loop Luar: Mengakses setiap hari (Baris)
+    for i in range(jumlah_baris):
+        total_harian = 0
+        jumlah_kolom = len(data_angka[i])
     # Loop Dalam: Mengakses setiap Produk (Kolom)
-    for j in range(jumlah_kolom):
-        total_harian = total_harian + data_penjualan[i][j]
+        for j in range(jumlah_kolom):
+            total_harian = total_harian + data_angka[i][j]
 
-    hasil_analisis.append(total_harian)
-print(hasil_analisis)
+        hasil_analisis.append(total_harian)
+    print(hasil_analisis)
 
-for i in range(len(nama_hari)):
-    data_labeling[nama_hari[i]] = hasil_analisis[i]
-print(data_labeling)
+    for i in range(len(data_label)):
+        data_labeling[data_label[i]] = hasil_analisis[i]
+    print(data_labeling)
+    return data_labeling
 
+hasil_akhir = analisis_penjualan(data_penjualan, nama_hari)
+print("Hasil Analisis per Hari: ", hasil_akhir)
 
 print("--- Analisis Per Produk (Kolom) ---")
 jumlah_kolom = len(data_penjualan[0])
