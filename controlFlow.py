@@ -368,3 +368,18 @@ for x in range(2, 101):
         print(x, end=" ")
         cnt = cnt + 1
 print("\n There are", cnt, "Prime Number")
+
+# Factorial Number
+n = 6
+fact1 = 1
+
+for x in range(1, n + 1):
+    fact1 = fact1 * x
+print(fact1)
+
+x = 5
+fact2 = 1
+
+for i in range(1, x + 1):
+    fact2 = fact2 * i
+print(fact2)
