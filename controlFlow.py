@@ -342,3 +342,29 @@ for x in range(1, 6):
     for y in range(x):
         print(y + 1, end=" ")
     print()
+
+# Prime Number
+x = int(input("Input your number: "))
+count = 0
+
+for i in range(1, x + 1):
+    if x % i == 0:
+        count = count + 1
+        
+if count == 2:
+    print(f"{x} is a Prime Number")
+else:
+    print(f"{x} is Not a Prime Number")
+
+# Prime Number 1 - 100
+cnt = 0
+for x in range(2, 101):
+    count = 0
+    for y in range(1, x + 1):
+        if x % y == 0:
+            count = count + 1
+
+    if count == 2:
+        print(x, end=" ")
+        cnt = cnt + 1
+print("\n There are", cnt, "Prime Number")
