@@ -42,28 +42,27 @@ for i in range(jumlah_kolom):
 
     print(f"Total Penjualan Per Produk: {total_produk}")
 
-barang_terjual = ["Kopi", "Teh", "Kopi", "Kopi", "Susu", "Teh", "Kopi", "Susu"]
+laporan_cabang = ["Kopi", "teh", "KOPI", "Susu", "susu", "TEH", "Kopi"]
 
-def hitung_frekuensi(data_input):
-    papan_tulis = {} # Dictionary Kosong
-    
-    # Loop mengecek setiap barang di keranjang
+def bersihkan_dan_hitung(data_input):
+    papan_tulis = {}
+
     for barang in data_input:
-        
-        # LOGIKA ANDA DI SINI
-        if barang in papan_tulis:
-            # KONDISI: Barang SUDAH ADA.
-            # Apa yang harus dilakukan pada nilainya?
-            # Clue: papan_tulis[barang] = papan_tulis[barang] + ...
-            papan_tulis[barang] = papan_tulis[barang] + 1 
-            
+        # --- LOGIKA ANDA DI SINI ---
+        barang_baru = barang.lower()
+        # 1. Ubah variabel 'barang' menjadi huruf kecil semua dulu
+        # Simpan di variabel baru, misal: barang_bersih
+        barang_bersih = barang_baru 
+
+        # 2. Gunakan 'barang_bersih' untuk masuk ke logika if-else
+        # (Sama seperti logika tantangan pertama Anda kemarin)
+        if barang_bersih in papan_tulis:
+            papan_tulis[barang_bersih] += 1
         else:
-            # KONDISI: Barang BELUM ADA (Baru pertama kali).
-            # Berapa angka awalnya?
-            papan_tulis[barang] = 1
+            papan_tulis[barang_bersih] = 1
             
     return papan_tulis
 
 # Eksekusi
-hasil = hitung_frekuensi(barang_terjual)
+hasil = bersihkan_dan_hitung(laporan_cabang)
 print(hasil)
