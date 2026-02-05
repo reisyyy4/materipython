@@ -66,3 +66,17 @@ def bersihkan_dan_hitung(data_input):
 # Eksekusi
 hasil = bersihkan_dan_hitung(laporan_cabang)
 print(hasil)
+
+data_penjualan = {'kopi': 5, 'teh': 1, 'susu': 3, 'cokelat': 2}
+laporan_final = {} # Tempat menyimpan barang yang laris saja
+
+for nama, jumlah in data_penjualan.items():
+    
+    # --- LOGIKA ANDA DI SINI ---
+    # Cek: Jika jumlah lebih besar dari 2, 
+    # masukkan ke dalam laporan_final
+    
+    if jumlah > 2 : # Isi kondisinya
+        laporan_final[nama] = jumlah
+
+print(laporan_final)
