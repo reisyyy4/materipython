@@ -23,6 +23,22 @@
             [ block of code ]
        We should not use print() inside any function, we must use return statement
        return the output
+
+    Two type of variables in Function
+    1. Local Variable: Declared inside the function, these variables can be accessed local
+    2. Global Variable: Declared out side, can be accessed any where 
+       Key word ___ global key word ___ to make local variable as global
+
+    Types of arguments in Function
+    1. Positional Arguments
+       Positional arguments are arguments that are pass to function in proper positional order. That is, the 1st positional argument needs to be
+       1st when the function is called. The 2nd positional argument needs to be 2nd when the function is called, etc
+    2. Keyword Arguments
+       A keyword arguments is an argument value, passed to function preceded by the variable name and an equals sign
+    3. Default Arguments
+    4. Variable-length Arguments
+       In Python, sometimes, there is a situation where we need to pass multiple numbers of arguments to the function. Such types of arguments
+       are called variable-length arguments. We can declare a variable-length argument with the * (asterisk) symbol
 '''
 
 # User-defined function
@@ -65,3 +81,39 @@ def sqrtFunction(x):
 
 result = sqrtFunction(49)
 print(result)
+
+# Two type of variable in function
+global_lang = 'Python Programming Language'
+def demo1():
+    local_lang = 'Java Programming Language'
+    print(local_lang)
+    print(global_lang)
+
+demo1()
+print(global_lang)
+# print(local_lang) --> Tidak bisa karena local hanya bisa diakses di dalam function
+# jika global_lang --> bisa diakses di dalam function ataupun di luar function
+
+# Global key word to make local variable as global
+def demo2():
+    global l_var
+    l_var = 'Java Programming Language'
+    print(l_var)
+    print(global_lang)
+
+demo2()
+print(l_var)
+
+# Positional arguments
+def addNumbers(x, y):
+    print(x - y)
+
+print(addNumbers(100, 200)) # Output -100
+print(addNumbers(200, 100)) # Output 100
+
+# Keyword arguments
+def message(name, surname):
+    print("Hello", name, surname)
+
+message(name = "Reisya", surname = "Okan")
+message(surname = "Reisya", name = "Okan")

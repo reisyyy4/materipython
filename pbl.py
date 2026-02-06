@@ -80,3 +80,32 @@ for nama, jumlah in data_penjualan.items():
         laporan_final[nama] = jumlah
 
 print(laporan_final)
+
+data_mentah = ["Apel", "apel", "Jeruk", "APEL", "Mangga", "jeruk", "Apel"]
+
+# Langkah 1 & 2: Membersihkan dan Menghitung
+def proses_data(data):
+    hasil_hitung = {}
+    for buah in data:
+        # --- LOGIKA 1: Ubah ke huruf kecil ---
+        buah_bersih = buah.lower()
+        
+        # --- LOGIKA 2: Hitung frekuensinya (if-else seperti kemarin) ---
+        if buah_bersih in hasil_hitung:
+            hasil_hitung[buah_bersih] += 1
+        else:
+            hasil_hitung[buah_bersih] = 1
+            
+    return hasil_hitung
+
+# Langkah 3: Filtering (Hanya yang muncul > 1 kali)
+data_terhitung = proses_data(data_mentah)
+laporan_final = {}
+
+for nama, jumlah in data_terhitung.items():
+    # --- LOGIKA 3: Masukkan if untuk jumlah > 1 di sini ---
+    if jumlah > 3:
+        laporan_final[nama] = jumlah
+
+print("Laporan Final Buah Terlaris:")
+print(laporan_final)
