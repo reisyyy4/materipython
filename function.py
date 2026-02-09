@@ -39,6 +39,34 @@
     4. Variable-length Arguments
        In Python, sometimes, there is a situation where we need to pass multiple numbers of arguments to the function. Such types of arguments
        are called variable-length arguments. We can declare a variable-length argument with the * (asterisk) symbol
+
+    Recursive Function
+    A recursive function is a function that calls itself, again anda again. Consider, calculating the factorial of a number is a repetitive activity, in
+    that case, we can call a function again and againm which calculates factorial
+
+    Lambda Function
+    Sometimes we need to declare a function without any name. The nameless property function is called an anonymous function or lambda function
+    The reason behind the using anonymous function is for instant use, that is, one time usage. Normal function is declared using the def function
+    Whereas the anonymous function is declared using the lambda keyword
+    In opposite to a normal function, a Python lambda function is a single expression. But, in lambda body, we can expand with expressions over multiple lines using
+    parentheses or a multiline string
+    Syntax of lambda function:
+    lambda: argument_list:expression
+
+    Filter Function
+    In python, the filter() function is used to return the filtered value. We use this function to filter values based on some conditions
+    Syntax of filter function:
+    filter(function, sequence)
+    where,
+    function - Function argument is responsible for performing condition checking
+    sequence - Sequence argument can be anything like list, tuple, string
+
+    Map function 
+    In python, the map() function is used to apply some functionality for every element present in the given sequence and generate a new series with a 
+    required modification
+    Ex: for every element present in the sequence, perform cube operation and generate a new cube list
+    Syntax of map function:
+    map(function, sequence)
 '''
 
 # User-defined function
@@ -117,3 +145,34 @@ def message(name, surname):
 
 message(name = "Reisya", surname = "Okan")
 message(surname = "Reisya", name = "Okan")
+
+# Recursive function
+def myFactFunc(n):
+    if n == 0:
+        return 1
+    else:
+        return n * myFactFunc(n-1)
+    
+res = myFactFunc(6)
+print(res)
+
+# Lambda function
+def strReverseUpper(str):
+    res = str[::-1].upper()
+    return res
+
+myName = 'Reisya Okan'
+print(strReverseUpper(myName))
+
+myResult = lambda str : str[::-1].upper()
+print(myResult('Okan'))
+
+# Filter function
+myList = [1,2,3,4,5,6,7,8,9,10]
+res = list(filter(lambda x : x % 2, myList ))
+print(res)
+
+# Map function
+myList = [1,2,3,4,5,6,7,8,9,10]
+res = list(map(lambda x : x ** 3 , myList))
+print(res)
