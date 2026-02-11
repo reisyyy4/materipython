@@ -109,3 +109,24 @@ for nama, jumlah in data_terhitung.items():
 
 print("Laporan Final Buah Terlaris:")
 print(laporan_final)
+
+# Python Transisi ke SQL
+karyawan = [
+    {"nama": "Andi", "dept": "Data", "gaji": 10000000},
+    {"nama": "Budi", "dept": "Data", "gaji": 7000000},
+    {"nama": "Cindi", "dept": "HR", "gaji": 9000000},
+    {"nama": "Dodi", "dept": "Data", "gaji": 12000000}
+]
+
+kandidat_promosi = []
+
+for orang in karyawan:
+    # --- LOGIKA ANDA DI SINI ---
+    # orang["dept"] untuk cek departemen
+    # orang["gaji"] untuk cek gaji
+    
+    if orang["dept"] == "Data" and orang["gaji"] > 8000000:
+        # Masukkan nama orang tersebut ke list kandidat_promosi
+        kandidat_promosi.append(orang["nama"])
+
+print(f"Karyawan yang lolos kriteria: {kandidat_promosi}")
